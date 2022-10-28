@@ -13,10 +13,10 @@
         {% for calc in calculs %}
             <li>
                 FIB - Started now : {{calc.created_at}}
-                    status : {{calc.status}}
-                    input : {{calc.input}}
-                    output : {{calc.output}}
-                    message : {{calc.message}}
+                <p>status : {{calc.status}}</p>
+                <p>input : {{calc.input}}</p>
+                <p>output : {% if calc.output %}{{calc.output}} {% else %}Processing{% endif %} </p>
+                <p>message : {{calc.message}}</p>    
             </li>
         {% endfor %}
     </ul>
